@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Assign label
-        evn:
+        env:
           TITLE: ${{ github.event.issue.title }}
         run: |
           if [[ "$TITLE" == *"bug"* ]]; then
